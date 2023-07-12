@@ -1,0 +1,117 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+    padding: 0;
+}
+
+.container{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.calculator{
+    background-color: azure;
+    width: 25rem;
+    height: 35rem;
+    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 5px;
+    grid-template-areas: 
+    'display display display display'
+    'plus minus timesItem divide'
+    'seven eight nine equal'
+    'four five six equal'
+    'one two three equal'
+    'zeroItem dotItem clear delete'
+    ;
+}
+.one{
+    grid-area: one;
+}
+.two{
+    grid-area: two;
+}
+.three{
+    grid-area: three;
+}
+#input-text{
+    grid-area: display;
+}
+.four{
+    grid-area: four;
+}
+.five{
+    grid-area: five;
+}
+.six{
+    grid-area: six;
+}
+.seven{
+    grid-area: seven;
+}
+.eight{
+    grid-area: eight;
+}
+.nine{
+    grid-area: nine;
+}
+.zero{
+    grid-area: zeroItem;
+}
+.plus{
+    grid-area: plus;
+}
+.minus{
+    grid-area: minus;
+}
+.multiply{
+    grid-area: timesItem;
+}
+.divide{
+    grid-area: divide;
+}
+.equal{
+    grid-area: equal;
+    background-color: orange;
+    border: none;
+}
+.dot{
+    grid-area: dotItem;
+}
+.clear{
+    grid-area: clear;
+}
+.delete{
+    grid-area: delete;
+}
+#input-text{
+    width: 25rem;
+    height: 6rem;
+    display: flex;
+    text-align: right;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 1.5rem 0;
+    background-color: #000;
+    color: #fff;
+    font-size: 2rem;
+    padding-right: .5rem;
+    border: none;
+}
+.calculator-button{
+    width: 6rem;
+    height: 6rem;
+}
+.equal{
+    height: 19rem;
+}
+button[data-operation]{
+    background-color: #d1d1d1;
+    border: none;
+    box-shadow: 1px 1px 1px gray;
+}
+button:active{
+    transform: translateY(3px);
+}
